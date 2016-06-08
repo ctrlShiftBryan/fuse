@@ -20,4 +20,4 @@ increment(Name, Counter) ->
 
 %% Internal.
 metric(Name, Counter) ->
-    [fuse, Name, Counter].
+    [application:get_env(fuse,exometer_namespace,fuse), Name, Counter].
